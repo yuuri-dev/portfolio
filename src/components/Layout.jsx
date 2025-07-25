@@ -4,9 +4,9 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       <Header />
-      <main>{children}</main>
+      <main className="p-4">{children}</main>
       <Footer />
     </div>
   );
