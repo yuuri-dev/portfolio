@@ -1,10 +1,15 @@
+import React  from 'react';
 import Layout from '@/components/Layout';
-import React from 'react';
+import ArticleFromQiita from '@/components/blog/ArticleFromQiita';
+
 
 const Blog = () => {
+  
   return (
     <div>
-      <Layout>Blog</Layout>
+      <Layout>
+        <ArticleFromQiita />
+      </Layout>
     </div>
   );
 };
