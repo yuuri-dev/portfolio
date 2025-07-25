@@ -1,32 +1,26 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
-const ArticleDetail = () => {
+const ArticlePage = () => {
   const router = useRouter();
-  const { id } = router.query;
+  const { slug } = router.query;
 
-  const [article, setArticle] = useState(null);
+  const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    if (!id) return;
+    if (!slug) return;
 
-    fetch(`/api/getQiitaBody?id=${id}`)
-      .then((res) => res.json())
-      .then((data) => setArticle(data));
-  }, [id]);
-
-  if (!article) return <p>Loading...</p>;
+    fetch(`/articles/${slug}.md`)
+      .then((res) => res.text())
+      .then((text) => setMarkdown(text));
+  }, [slug]);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">{article.title}</h1>
-      <p className="text-gray-500">{article.created_at}</p>
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: article.rendered_body }}
-      />
+    <div className="prose max-w-none p-4">
+      <ReactMarkdown>{markdown}</ReactMarkdown>
     </div>
   );
 };
 
-export default ArticleDetail;
+export default ArticlePage;
