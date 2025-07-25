@@ -1,8 +1,10 @@
+import Layout from '@/components/Layout'
 import React from 'react'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div>
+      <Layout>Projects</Layout></div>
   )
 }
 

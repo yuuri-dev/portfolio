@@ -1,9 +1,12 @@
-import React from 'react'
+import Layout from '@/components/Layout';
+import React from 'react';
 
 const Blog = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <div>
+      <Layout>Blog</Layout>
+    </div>
+  );
+};
 
-export default Blog
+export default Blog;
