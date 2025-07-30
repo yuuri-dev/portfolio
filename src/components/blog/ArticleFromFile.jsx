@@ -5,7 +5,7 @@ const ArticleFromFile = () => {
 
   useEffect(() => {
     // 手動で一覧を指定（本番では自動化する方法もあり）
-    setFiles(['test.md', 'second-post.md']);
+    setFiles(['test.md', 'portfolio.md']);
   }, []);
 
   return (
