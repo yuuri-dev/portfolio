@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <Layout>
       <div className={styles.hero}>
-        <h1 className="text-white text-2xl text-center font-black">Welcome to My portfolio Page</h1>
+        <h1 className="text-white text-2xl text-center font-black">
+          Welcome to My portfolio Page
+        </h1>
       </div>
     </Layout>
   );
