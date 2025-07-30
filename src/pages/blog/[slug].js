@@ -8,10 +8,11 @@ export default function BlogPost() {
 
   useEffect(() => {
     if (!slug) return;
-    fetch(`/api/getMarkdownArticle?slug=${slug}`)
+    fetch(`/api/getQiitaBody?slug=${slug}`)
       .then((res) => res.json())
       .then((data) => {
-        setContent(data.content);
+        console.log('Fetched data:', data); // ← ここで rendered_body を確認できる
+        setContent(data.rendered_body); // ← content ではなく rendered_body に変更
       });
   }, [slug]);
 
