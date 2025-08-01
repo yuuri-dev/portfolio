@@ -17,7 +17,7 @@ const ProjectList = ({ info }) => {
         />
         <div className="p-4">
           <h3 className="text-lg font-bold">{info.name}</h3>
-          <p className="text-gray-600 mt-2">{info.description}</p>
+          <p className="text-gray-600 mt-2">{info.sub_title}</p>
         </div>
       </div>
       <ProjectModal
