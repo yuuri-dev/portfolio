@@ -5,9 +5,15 @@ export default function Home() {
   return (
     <Layout>
       <div className={styles.hero}>
-        <h1 className="text-white text-2xl text-center font-black">
-          Welcome to My portfolio Page
-        </h1>
+        <div className="flex flex-col items-center space-y-1">
+          <h1 className="text-white text-4xl text-center font-black">
+            Welcome to My Portfolio.
+          </h1>
+          <p className="text-white text-lg text-center mt-6 max-w-xl mx-auto">
+            This site showcases my skills and past projects to help you better
+            understand my strengths and approach to development.
+          </p>
+        </div>
       </div>
     </Layout>
   );
