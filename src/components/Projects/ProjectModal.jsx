@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectModal = ({ isOpen, onClose, info }) => {
   if (!isOpen) return null;
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -15,10 +22,7 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
 
       {/* モーダル本体 */}
       <div className="fixed inset-0 z-50 flex items-center justify-center">
-        <div
-          className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full p-8 relative 
-                     transition-all duration-300 ease-out scale-100 opacity-100"
-        >
+        <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
           {/* 閉じるボタン */}
           <button
             onClick={onClose}
@@ -31,11 +35,21 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
           <div className="flex flex-col items-center text-center">
             <h2 className="text-3xl font-bold mb-2">{info.name}</h2>
             <p className="text-gray-500 mb-4">{info.sub_title}</p>
-            <img
-              src={info.img}
-              alt="アプリ画像"
-              className="w-full rounded mb-4 max-h-[400px] object-cover"
-            />
+            <div className="border border-black rounded my-3">
+              <img
+                src={info.img1}
+                alt="アプリ画像"
+                className="w-full rounded max-h-[300px] object-cover"
+              />
+            </div>
+
+            <div className="border border-black rounded my-3">
+              <img
+                src={info.img2}
+                alt="アプリ画像"
+                className="w-full rounded max-h-[300px] object-cover"
+              />
+            </div>
             <p className="text-lg mb-2">{info.description}</p>
             <p className="text-sm text-gray-600 mb-4">
               制作期間: {info.period}
