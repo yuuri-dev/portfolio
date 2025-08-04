@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectModal = ({ isOpen, onClose, info }) => {
   if (!isOpen) return null;
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -15,10 +22,7 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
 
       {/* モーダル本体 */}
       <div className="fixed inset-0 z-50 flex items-center justify-center">
-        <div
-          className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full p-8 relative 
-                     transition-all duration-300 ease-out scale-100 opacity-100"
-        >
+        <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
           {/* 閉じるボタン */}
           <button
             onClick={onClose}
