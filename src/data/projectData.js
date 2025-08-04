@@ -9,7 +9,6 @@ const projectData = [
     description: `このアプリは最適なシフトを簡単に出力してくれるアプリケーションです。
 まず、主要な機能としてはシフトの入力、必要人数の入力、シフト生成、作成したシフトの出力です。
 作成したシフトは、pdfや画像として保存することもできます。`,
-    url: 'https://shifty.example.com',
     stack: ['Next.js', 'Supabase', 'Tailwind CSS'],
     githubUrl: 'https://github.com/yuuri-dev/Shityj-app0507',
     liveUrl: 'https://shityj-app0507-lylpdj5b0-nextpandas-projects.vercel.app',
@@ -23,10 +22,9 @@ const projectData = [
     period: '2日',
     description:
       'このアプリは、タブ譜と呼ばれるギターの楽譜を簡単に入力、保存、表示できるアプリです。主要機能としてはタブ譜の入力、表示、検索機能、ランキング表示、いいね機能があります。',
-    url: 'https://myblog.example.com',
     stack: ['Next.js', 'Markdown'],
-    githubUrl: 'https://github.com/username/repo',
-    liveUrl: 'https://myapp.example.com',
+    githubUrl: 'https://github.com/yuuri-dev/tabree',
+    liveUrl: '',
   },
   {
     id: 3,
@@ -36,10 +34,10 @@ const projectData = [
     img2: '/images/projects/motibe_timer_top.jpeg',
     period: '一週間',
     description: 'このアプリは....',
-    url: 'https://myblog.example.com',
     stack: ['Next.js', 'Markdown'],
-    githubUrl: 'https://github.com/username/repo',
-    liveUrl: 'https://myapp.example.com',
+    githubUrl:
+      'https://github.com/geek-2025-07-18-motibe/MotivationTimer_front',
+    liveUrl: 'https://motibe-devops-geek202507.github.io/MotivationTimer',
   },
   {
     id: 4,
@@ -49,10 +47,9 @@ const projectData = [
     img2: '/images/projects/portfolio2.png',
     period: '2週間',
     description: '本アプリです。',
-    url: 'https://portfolio.example.com',
     stack: ['React', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/repo',
-    liveUrl: 'https://myapp.example.com',
+    githubUrl: 'https://github.com/yuuri-dev/portfolio',
+    liveUrl: 'https://portfolio-two-vert-61.vercel.app',
   },
 ];
 
