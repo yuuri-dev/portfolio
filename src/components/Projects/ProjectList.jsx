@@ -11,7 +11,7 @@ const ProjectList = ({ info }) => {
         className="cursor-pointer bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden"
       >
         <img
-          src={info.img}
+          src={info.img1}
           alt={info.name}
           className="w-full h-48 object-cover"
         />
