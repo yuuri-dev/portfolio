@@ -34,10 +34,17 @@ const projectData = [
     img2: '/images/projects/motibe_timer_top.jpeg',
     period: '一週間',
     description: 'このアプリは....',
+<<<<<<< HEAD
     stack: ['Next.js', 'Markdown'],
     githubUrl:
       'https://github.com/geek-2025-07-18-motibe/MotivationTimer_front',
     liveUrl: 'https://motibe-devops-geek202507.github.io/MotivationTimer',
+=======
+    url: 'https://myblog.example.com',
+    stack: ['Next.js', 'Markdown'],
+    githubUrl: 'https://github.com/username/repo',
+    liveUrl: 'https://myapp.example.com',
+>>>>>>> 6aacd87 (間違えてresetしてしまったのでそのままpushしました)
   },
   {
     id: 4,
@@ -47,6 +54,10 @@ const projectData = [
     img2: '/images/projects/portfolio2.png',
     period: '2週間',
     description: '本アプリです。',
+<<<<<<< HEAD
+=======
+    url: 'https://portfolio.example.com',
+>>>>>>> 6aacd87 (間違えてresetしてしまったのでそのままpushしました)
     stack: ['React', 'Tailwind CSS'],
     githubUrl: 'https://github.com/yuuri-dev/portfolio',
     liveUrl: 'https://portfolio-two-vert-61.vercel.app',
