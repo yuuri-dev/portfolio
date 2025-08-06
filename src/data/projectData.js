@@ -54,10 +54,6 @@ const projectData = [
     img2: '/images/projects/portfolio2.png',
     period: '2週間',
     description: '本アプリです。',
-<<<<<<< HEAD
-=======
-    url: 'https://portfolio.example.com',
->>>>>>> 6aacd87 (間違えてresetしてしまったのでそのままpushしました)
     stack: ['React', 'Tailwind CSS'],
     githubUrl: 'https://github.com/yuuri-dev/portfolio',
     liveUrl: 'https://portfolio-two-vert-61.vercel.app',
