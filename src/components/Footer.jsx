@@ -29,12 +29,18 @@ export default function Footer() {
               <span className="sr-only">Twitter</span>
             </a>
             <a
-              href="https://qiita.com/yourusername"
+              href="https://twitter.com/yuuri5117"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+              className="text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <img src="/qiita.png" alt="Qiita" width={20} height={20} />
+              <img
+                src="/images/qiita.png"
+                alt="Qiita"
+                width={20}
+                height={20}
+                className="filter grayscale hover:grayscale-0"
+              />
               <span className="sr-only">Qiita</span>
             </a>
             <a
