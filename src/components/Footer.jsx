@@ -11,7 +11,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/yuuri-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://twitter.com/yuuri5117"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -29,16 +29,16 @@ export default function Footer() {
               <span className="sr-only">Twitter</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://qiita.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-600 transition-colors"
+              className="flex items-center text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <Linkedin size={20} />
-              <span className="sr-only">LinkedIn</span>
+              <img src="/qiita.png" alt="Qiita" width={20} height={20} />
+              <span className="sr-only">Qiita</span>
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:yuuri041125@icloud.com"
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <Mail size={20} />
