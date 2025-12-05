@@ -29,7 +29,7 @@ export default function Footer() {
               <span className="sr-only">Twitter</span>
             </a>
             <a
-              href="https://twitter.com/yuuri5117"
+              href="https://qiita.com/yuuri17"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"

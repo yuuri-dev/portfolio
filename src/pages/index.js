@@ -6,7 +6,7 @@ export default function Home() {
     <Layout>
       <div className={styles.hero}>
         <div className="flex flex-col items-center space-y-1">
-          <h1 className="text-white text-4xl text-center font-black">
+          <h1 className="text-white text-6xl text-center font-black">
             Welcome to My Portfolio.
           </h1>
           <p className="text-white text-lg text-center mt-6 max-w-xl mx-auto">
