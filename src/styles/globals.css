@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1{
+  font-size: xx-large;
+  padding: 15px;
+}
+
+h2{
+  font-size: x-large;
+  padding: 10px;
+
+}
+
+h3{
+  font-size: large;
+  padding: 5px;
+}
