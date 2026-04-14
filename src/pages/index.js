@@ -39,12 +39,10 @@ export default function Home() {
             Frontend Developer
           </p>
           <h1 className="text-white text-5xl text-center font-black">
-            井上 悠理
+            Yuuri Inoue
           </h1>
           <p className="text-white text-lg text-center max-w-xl mx-auto opacity-90">
-            フロントエンド開発を軸に Web アプリケーション制作に取り組んでいます。
-            <br />
-            電気通信大学 3 年生 / フルスタックエンジニアを目指して学習中。
+            Frontend-focused engineer building web & mobile apps.
           </p>
           <div className="flex gap-4 mt-4">
             <Link
