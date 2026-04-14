@@ -1,20 +1,16 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import ReactMarkdown from 'react-markdown';
 
 const ArticlePage = () => {
   const router = useRouter();
-  const { slug } = router.query;
+  const { id } = router.query;
 
-  const [markdown, setMarkdown] = useState('');
-
-  useEffect(() => {
-    if (!slug) return;
-
-    fetch(`/articles/${slug}.md`)
-      .then((res) => res.text())
-      .then((text) => setMarkdown(text));
-  }, [slug]);
+  const { data: markdown = '' } = useQuery({
+    queryKey: ['article', id],
+    queryFn: () => fetch(`/articles/${id}.md`).then((res) => res.text()),
+    enabled: !!id,
+  });
 
   return (
     <div className="prose max-w-none p-4">

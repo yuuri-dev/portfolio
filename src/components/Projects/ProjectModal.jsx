@@ -3,14 +3,14 @@ import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectModal = ({ isOpen, onClose, info }) => {
-  if (!isOpen) return null;
-
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <>

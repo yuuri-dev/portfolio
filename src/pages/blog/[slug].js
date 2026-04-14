@@ -1,20 +1,18 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
 export default function BlogPost() {
   const router = useRouter();
   const { slug } = router.query;
-  const [content, setContent] = useState('');
 
-  useEffect(() => {
-    if (!slug) return;
-    fetch(`/api/getQiitaBody?slug=${slug}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log('Fetched data:', data); // ← ここで rendered_body を確認できる
-        setContent(data.rendered_body); // ← content ではなく rendered_body に変更
-      });
-  }, [slug]);
+  const { data: content = '' } = useQuery({
+    queryKey: ['qiita-body', slug],
+    queryFn: () =>
+      fetch(`/api/getQiitaBody?slug=${slug}`)
+        .then((res) => res.json())
+        .then((data) => data.rendered_body),
+    enabled: !!slug,
+  });
 
   return (
     <div className="prose mx-auto p-4">

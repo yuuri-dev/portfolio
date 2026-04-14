@@ -7,12 +7,12 @@ const ArticleFromFile = () => {
     // 手動で記事情報を指定（タイトルと作成日）
     setArticles([
       {
-        id: 'test.md',
+        id: 'test',
         title: 'test',
         created_at: '2024-12-01',
       },
       {
-        id: 'portfolio.md',
+        id: 'portfolio',
         title: 'portfolio',
         created_at: '2025-03-15',
       },

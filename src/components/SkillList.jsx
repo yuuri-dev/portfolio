@@ -43,8 +43,8 @@ const skillArray = [
   },
   {
     lang: 'TailwindCSS',
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
-    description: '現在学習中です',
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+    description: '現在学習中です。',
   },
   {
     lang: 'Vercel',

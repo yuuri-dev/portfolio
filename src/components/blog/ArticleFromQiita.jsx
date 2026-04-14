@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { SiQiita } from 'react-icons/si';
+import { useQuery } from '@tanstack/react-query';
 
 const ArticleFromQiita = () => {
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/getQiitaArticle')
-      .then((res) => res.json())
-      .then((data) => setArticles(data));
-  }, []);
+  const { data: articles = [] } = useQuery({
+    queryKey: ['qiita-articles'],
+    queryFn: () => fetch('/api/getQiitaArticle').then((res) => res.json()),
+  });
 
   return (
     <div className="p-4">
@@ -19,7 +17,6 @@ const ArticleFromQiita = () => {
             key={item.id}
             className="relative border border-gray-200 rounded-lg shadow p-6 bg-white"
           >
-            {/* タイトルと日付 */}
             <a
               href={`/blog/${item.id}`}
               rel="noopener noreferrer"
@@ -27,12 +24,10 @@ const ArticleFromQiita = () => {
             >
               <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
             </a>
-              <p className="text-sm text-gray-500">
-                {new Date(item.created_at).toLocaleDateString()}
-              </p>
-            
+            <p className="text-sm text-gray-500">
+              {new Date(item.created_at).toLocaleDateString()}
+            </p>
 
-            {/* Qiitaアイコンへのリンク */}
             <a
               href={item.url}
               target="_blank"

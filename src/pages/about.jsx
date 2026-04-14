@@ -30,7 +30,6 @@ const About = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold mb-4 text-center">Skills</h3>
           <SkillList />
         </div>
       </div>
