@@ -1,6 +1,8 @@
 import Layout from '@/components/Layout';
 import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
+import { Github, Mail } from 'lucide-react';
+import { SiX, SiQiita } from 'react-icons/si';
 
 const topSkills = [
   {
@@ -93,6 +95,57 @@ export default function Home() {
         >
           Projects →
         </Link>
+      </section>
+
+      {/* Contact */}
+      <section className="border-t py-16 text-center">
+        <h2 className="text-2xl font-bold mb-2">Contact</h2>
+        <p className="text-gray-400 text-sm mb-10">お気軽にご連絡ください</p>
+        <div className="flex justify-center gap-8 flex-wrap">
+          <a
+            href="mailto:yuuri5117@gmail.com"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <Mail size={28} />
+            <span className="text-xs">Email</span>
+          </a>
+          <a
+            href="https://github.com/yuuri-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <Github size={28} />
+            <span className="text-xs">GitHub</span>
+          </a>
+          <a
+            href="https://twitter.com/yuuri5117"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <SiX size={26} />
+            <span className="text-xs">X</span>
+          </a>
+          <a
+            href="https://qiita.com/yuuri17"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-green-600 transition-colors"
+          >
+            <SiQiita size={28} />
+            <span className="text-xs">Qiita</span>
+          </a>
+          <a
+            href="https://note.com/yuuri935"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <span className="text-2xl font-bold leading-7">n</span>
+            <span className="text-xs">note</span>
+          </a>
+        </div>
       </section>
     </Layout>
   );
