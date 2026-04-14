@@ -1,4 +1,5 @@
-import { Github, Twitter, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
+import { SiX } from 'react-icons/si';
 
 export default function Footer() {
   return (
@@ -25,8 +26,16 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <Twitter size={20} />
-              <span className="sr-only">Twitter</span>
+              <SiX size={18} />
+              <span className="sr-only">X</span>
+            </a>
+            <a
+              href="https://note.com/yuuri935"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-600 transition-colors text-sm font-bold leading-5"
+            >
+              note
             </a>
             <a
               href="mailto:yuuri5117@gmail.com"
