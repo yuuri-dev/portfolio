@@ -1,13 +1,14 @@
 import Layout from '@/components/Layout';
 import SkillList from '@/components/SkillList';
+import PageHeader from '@/components/PageHeader';
 import React from 'react';
 
 const About = () => {
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8 text-center">Profile</h2>
+      <PageHeader title="About" subtitle="Profile & Skills" />
 
+      <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="flex flex-col items-center md:flex-row md:items-start gap-6 mb-10">
           <img
             src="/images/icon.jpeg"
