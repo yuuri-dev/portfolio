@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { FileText } from 'lucide-react';
 
 const ArticleFromFile = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    // 手動で記事情報を指定（タイトルと作成日）
     setArticles([
       {
         id: 'test',
@@ -20,30 +20,46 @@ const ArticleFromFile = () => {
   }, []);
 
   return (
-    <div className="p-4">
-      <p className="text-2xl font-bold mb-6">ローカル記事一覧</p>
+    <section>
+      {/* セクションヘッダー */}
+      <div className="flex items-center gap-3 mb-6">
+        <FileText size={22} className="text-gray-500" />
+        <h2 className="text-xl font-bold text-gray-900">ローカル記事</h2>
+        <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">
+          {articles.length} 件
+        </span>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((item) => (
           <div
             key={item.id}
-            className="relative border border-gray-200 rounded-lg shadow p-6 bg-white"
+            className="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-md transition-all duration-200 p-6 flex flex-col justify-between"
           >
+            {/* バッジ */}
+            <span className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full mb-3 w-fit">
+              <FileText size={10} />
+              Note
+            </span>
+
             {/* タイトル */}
             <a
               href={`/articles/${item.id}`}
-              rel="noopener noreferrer"
-              className="block mb-8 text-gray-900 hover:text-blue-600 hover:underline cursor-pointer"
+              className="flex-1 text-gray-900 hover:text-blue-600 transition-colors"
             >
-              <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
+              <h3 className="text-base font-semibold leading-snug">
+                {item.title}
+              </h3>
             </a>
+
             {/* 日付 */}
-            <p className="text-sm text-gray-500">
-              {new Date(item.created_at).toLocaleDateString()}
+            <p className="text-xs text-gray-400 mt-4">
+              {new Date(item.created_at).toLocaleDateString('ja-JP')}
             </p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
