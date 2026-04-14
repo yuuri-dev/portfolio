@@ -16,6 +16,8 @@ export default function BlogPost() {
     enabled: !!slug,
   });
 
+  const showLoading = !router.isReady || isLoading;
+
   return (
     <Layout>
       <div className="max-w-3xl mx-auto px-4 py-10">
@@ -29,7 +31,7 @@ export default function BlogPost() {
         </Link>
 
         {/* ローディング */}
-        {isLoading && (
+        {showLoading && (
           <div className="space-y-4 animate-pulse">
             <div className="h-8 bg-gray-100 rounded w-3/4" />
             <div className="h-4 bg-gray-100 rounded w-1/4" />
@@ -43,7 +45,7 @@ export default function BlogPost() {
         )}
 
         {/* 記事コンテンツ */}
-        {!isLoading && data && (
+        {!showLoading && data && (
           <>
             {/* ヘッダー */}
             <div className="mb-8">
