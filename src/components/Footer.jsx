@@ -1,4 +1,5 @@
-import { Github, Twitter, Mail, Linkedin } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
+import { SiX } from 'react-icons/si';
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/yuuri-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -20,25 +21,24 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://twitter.com/yuuri5117"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <Twitter size={20} />
-              <span className="sr-only">Twitter</span>
+              <SiX size={18} />
+              <span className="sr-only">X</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://note.com/yuuri935"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-600 transition-colors"
+              className="text-gray-400 hover:text-gray-600 transition-colors text-sm font-bold leading-5"
             >
-              <Linkedin size={20} />
-              <span className="sr-only">LinkedIn</span>
+              note
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:yuuri5117@gmail.com"
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <Mail size={20} />
