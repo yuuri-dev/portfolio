@@ -47,9 +47,9 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
 
             {/* 説明文 */}
             {info.description && (
-              <pre className="text-base text-gray-700 mb-4 leading-relaxed">
+              <p className="text-base text-gray-700 mb-4 leading-relaxed">
                 {info.description}
-              </pre>
+              </p>
             )}
 
             {/* 画像グリッド */}
@@ -78,10 +78,10 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
               </div>
             )}
 
-            {/* 制作期間 */}
-            {info.period && (
+            {/* リリース */}
+            {info.releasedAt && (
               <p className="text-sm text-gray-400 mb-5">
-                制作期間: {info.period}
+                リリース: {info.releasedAt}
               </p>
             )}
 

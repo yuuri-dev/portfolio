@@ -31,11 +31,11 @@ const ProjectList = ({ info }) => {
           <h3 className="text-lg font-bold text-gray-900 mb-1">{info.name}</h3>
           <p className="text-sm text-gray-500 mb-4">{info.sub_title}</p>
 
-          {/* 制作期間 */}
-          {info.period && (
+          {/* リリース */}
+          {info.releasedAt && (
             <div className="flex items-center gap-1 text-xs text-gray-400 mb-3">
               <Clock size={12} />
-              <span>{info.period}</span>
+              <span>{info.releasedAt}</span>
             </div>
           )}
 

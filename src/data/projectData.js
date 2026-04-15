@@ -10,7 +10,7 @@ const projectData = [
       '/images/projects/tomareco/3.png',
       '/images/projects/tomareco/4.png',
     ],
-    period: '2026年3月',
+    releasedAt: '2026年3月',
     description: `初めてのiosアプリです。
     このアプリは可愛いトマトがモチーフとなっている学習記録アプリです。
     記録にかかる時間はたったの5秒！
@@ -33,10 +33,12 @@ const projectData = [
       '/images/projects/yomisapo/5.png',
       '/images/projects/yomisapo/6.png',
     ],
-    period: '2026年3月',
-    description: '',
+    releasedAt: '2026年3月',
+    description: `iosアプリです。読書のお供として、単語の意味を調べたり、読書の記録を残すことができます。
+    読後の振り返りがスムーズに行えるようにAIによる要約やクイズ機能など、盛りだくさんです。
+    読書をしても頭に残らない、読書が苦手な方におすすめです。`,
     stack: ['React Native', 'Expo', 'geminiAPI', 'GoogleBooksAPI'],
-    githubUrl: `iosアプリです。読書のお供として、単語の意味を調べたり、読書の記録を残すことができます。`,
+    githubUrl: '',
     liveUrl:
       'https://apps.apple.com/jp/app/%E3%82%88%E3%81%BF%E3%82%B5%E3%83%9D/id6760947477',
   },
@@ -49,7 +51,7 @@ const projectData = [
       '/images/projects/link_board/2.png',
       '/images/projects/link_board/3.png',
     ],
-    period: '2025年12月',
+    releasedAt: '2025年12月',
     description: `このアプリはよく使うリンクを一覧で表示し、ワンクリックで飛べるアプリです。
     ジャンルごとにリンクを追加できるので、ブラウザがすぐ散らかってしまう方におすすめのアプリとなっています。`,
     stack: ['Next.js', 'Tailwind CSS'],
@@ -61,7 +63,7 @@ const projectData = [
     name: 'Shifty',
     sub_title: 'シフト自動生成アプリ',
     images: ['/images/projects/shifty.png'],
-    period: '2025年8月',
+    releasedAt: '2025年8月',
     description: `このアプリは最適なシフトを簡単に出力してくれるアプリケーションです。
 まず、主要な機能としてはシフトの入力、必要人数の入力、シフト生成、作成したシフトの出力です。
 作成したシフトは、pdfや画像として保存することもできます。`,
@@ -74,7 +76,7 @@ const projectData = [
     name: 'Tab譜アプリ',
     sub_title: 'ハッカソンで作成',
     images: ['/images/projects/tabree_top.jpeg'],
-    period: '2025年6月',
+    releasedAt: '2025年6月',
     description:
       'このアプリは、タブ譜と呼ばれるギターの楽譜を簡単に入力、保存、表示できるアプリです。主要機能としてはタブ譜の入力、表示、検索機能、ランキング表示、いいね機能があります。',
     stack: ['Next.js', 'Markdown'],
@@ -86,7 +88,7 @@ const projectData = [
     name: 'Motivation Timer',
     sub_title: 'ハッカソンで作成',
     images: ['/images/projects/motibe_timer_top.jpeg'],
-    period: '2025年7月',
+    releasedAt: '2025年7月',
     description: 'このアプリは....',
     stack: ['Next.js', 'Markdown'],
     githubUrl:
@@ -101,7 +103,7 @@ const projectData = [
       '/images/projects/portfolio1.png',
       '/images/projects/portfolio2.png',
     ],
-    period: '2025年5月',
+    releasedAt: '2025年5月',
     description: '本アプリです。',
     stack: ['Next.js', 'React', 'Tailwind CSS'],
     githubUrl: 'https://github.com/yuuri-dev/portfolio',
