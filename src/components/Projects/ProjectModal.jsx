@@ -12,9 +12,12 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
 
   if (!isOpen) return null;
 
+  const images = info.images ?? [];
+  const isMultiple = images.length > 1;
+
   return (
     <>
-      {/* 背景オーバーレイ（Headerより上の z-[60]）*/}
+      {/* 背景オーバーレイ */}
       <div
         className="fixed inset-0 z-[60] bg-black/50"
         onClick={onClose}
@@ -25,7 +28,7 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
         className="fixed inset-0 z-[70] flex items-center justify-center px-4 py-6"
         onClick={onClose}
       >
-        {/* モーダル本体（クリック伝播を止める）*/}
+        {/* モーダル本体 */}
         <div
           className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto relative"
           onClick={(e) => e.stopPropagation()}
@@ -38,38 +41,47 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
             <X size={20} />
           </button>
 
-          {/* コンテンツ */}
-          <div className="p-6 sm:p-8 flex flex-col items-center text-center">
+          <div className="p-6 sm:p-8">
+            {/* タイトル */}
             <h2 className="text-2xl sm:text-3xl font-bold mb-1">{info.name}</h2>
-            <p className="text-gray-500 mb-6">{info.sub_title}</p>
-
-            {/* 画像（object-contain で縦長でも全体表示）*/}
-            {info.img1 && (
-              <div className="w-full bg-gray-50 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
-                <img
-                  src={info.img1}
-                  alt="アプリ画像1"
-                  className="w-full max-h-64 object-contain"
-                />
-              </div>
-            )}
-            {info.img2 && info.img2 !== info.img1 && (
-              <div className="w-full bg-gray-50 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img
-                  src={info.img2}
-                  alt="アプリ画像2"
-                  className="w-full max-h-64 object-contain"
-                />
-              </div>
+            {info.sub_title && (
+              <p className="text-gray-500 mb-6">{info.sub_title}</p>
             )}
 
-            <p className="text-base text-gray-700 mb-3 text-left w-full">{info.description}</p>
-            <p className="text-sm text-gray-400 mb-5 w-full text-left">
-              制作期間: {info.period}
-            </p>
+            {/* 画像グリッド */}
+            {images.length > 0 && (
+              <div className={`grid gap-2 mb-6 ${isMultiple ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                {images.map((src, i) => {
+                  const isLastOdd = isMultiple && images.length % 2 !== 0 && i === images.length - 1;
+                  return (
+                    <div
+                      key={i}
+                      className={`bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center ${isLastOdd ? 'col-span-2' : ''}`}
+                    >
+                      <img
+                        src={src}
+                        alt={`${info.name} 画像${i + 1}`}
+                        className={`object-contain ${isLastOdd ? 'max-h-48 w-1/2' : 'max-h-64 w-full'}`}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
 
-            {info.stack && (
-              <div className="mb-6 w-full text-left">
+            {/* 説明文 */}
+            {info.description && (
+              <p className="text-base text-gray-700 mb-4 leading-relaxed">{info.description}</p>
+            )}
+
+            {/* 制作期間 */}
+            {info.period && (
+              <p className="text-sm text-gray-400 mb-5">制作期間: {info.period}</p>
+            )}
+
+            {/* 使用技術 */}
+            {info.stack && info.stack.length > 0 && (
+              <div className="mb-6">
                 <p className="text-sm font-semibold text-gray-600 mb-2">使用技術</p>
                 <ul className="flex flex-wrap gap-2 text-sm text-gray-600">
                   {info.stack.map((tech, index) => (
@@ -81,8 +93,9 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
               </div>
             )}
 
+            {/* リンクボタン */}
             {(info.githubUrl || info.liveUrl) && (
-              <div className="flex flex-wrap gap-3 w-full">
+              <div className="flex flex-wrap gap-3">
                 {info.githubUrl && (
                   <Link
                     href={info.githubUrl}
