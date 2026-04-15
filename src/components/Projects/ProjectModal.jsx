@@ -94,7 +94,7 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
             )}
 
             {/* リンクボタン */}
-            {(info.githubUrl || info.liveUrl) && (
+            {(info.githubUrl || info.liveUrl || info.lpUrl) && (
               <div className="flex flex-wrap gap-3">
                 {info.githubUrl && (
                   <Link
@@ -116,6 +116,17 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
+                  </Link>
+                )}
+                {info.lpUrl && (
+                  <Link
+                    href={info.lpUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full text-sm hover:bg-orange-600 transition"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    LP サイト
                   </Link>
                 )}
               </div>
