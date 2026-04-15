@@ -43,7 +43,7 @@ const skillArray = [
   },
   {
     lang: 'Canva',
-    img: '',
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg',
     description: 'アプリのデザイン・アイコン作成等で使用',
   },
   {
@@ -68,11 +68,13 @@ const SkillList = () => {
             key={skill.lang}
             className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg duration-200"
           >
-            <img
-              src={skill.img}
-              alt={`${skill.lang} logo`}
-              className="w-16 h-16 object-contain mb-2"
-            />
+            {skill.img && (
+              <img
+                src={skill.img}
+                alt={`${skill.lang} logo`}
+                className="w-16 h-16 object-contain mb-2"
+              />
+            )}
             <p className="text-sm font-semibold">{skill.lang}</p>
             <p className="text-xs text-center text-gray-500 mt-1">
               {skill.description}
