@@ -3,8 +3,8 @@ const projectData = [
     id: 5,
     name: 'Tomareco',
     sub_title: '学習記録アプリ',
+    thumbnail: '/images/projects/tomareco/top.png',
     images: [
-      '/images/projects/tomareco/top.png',
       '/images/projects/tomareco/1.png',
       '/images/projects/tomareco/2.png',
       '/images/projects/tomareco/3.png',
@@ -24,6 +24,7 @@ const projectData = [
     id: 6,
     name: 'よみサポ',
     sub_title: '読書サポートアプリ',
+    thumbnail: '/images/projects/yomisapo/top.png',
     images: [
       '/images/projects/yomisapo/1.png',
       '/images/projects/yomisapo/2.png',

@@ -14,7 +14,7 @@ const ProjectList = ({ info }) => {
         {/* サムネイル */}
         <div className="relative overflow-hidden h-48">
           <img
-            src={info.images[0]}
+            src={info.thumbnail ?? info.images[0]}
             alt={info.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />

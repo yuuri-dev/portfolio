@@ -18,10 +18,7 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
   return (
     <>
       {/* 背景オーバーレイ */}
-      <div
-        className="fixed inset-0 z-[60] bg-black/50"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 z-[60] bg-black/50" onClick={onClose} />
 
       {/* モーダル全体ラッパー（外側クリックで閉じる）*/}
       <div
@@ -48,11 +45,23 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
               <p className="text-gray-500 mb-6">{info.sub_title}</p>
             )}
 
+            {/* 説明文 */}
+            {info.description && (
+              <pre className="text-base text-gray-700 mb-4 leading-relaxed">
+                {info.description}
+              </pre>
+            )}
+
             {/* 画像グリッド */}
             {images.length > 0 && (
-              <div className={`grid gap-2 mb-6 ${isMultiple ? 'grid-cols-2' : 'grid-cols-1'}`}>
+              <div
+                className={`grid gap-2 mb-6 ${isMultiple ? 'grid-cols-2' : 'grid-cols-1'}`}
+              >
                 {images.map((src, i) => {
-                  const isLastOdd = isMultiple && images.length % 2 !== 0 && i === images.length - 1;
+                  const isLastOdd =
+                    isMultiple &&
+                    images.length % 2 !== 0 &&
+                    i === images.length - 1;
                   return (
                     <div
                       key={i}
@@ -69,23 +78,25 @@ const ProjectModal = ({ isOpen, onClose, info }) => {
               </div>
             )}
 
-            {/* 説明文 */}
-            {info.description && (
-              <p className="text-base text-gray-700 mb-4 leading-relaxed">{info.description}</p>
-            )}
-
             {/* 制作期間 */}
             {info.period && (
-              <p className="text-sm text-gray-400 mb-5">制作期間: {info.period}</p>
+              <p className="text-sm text-gray-400 mb-5">
+                制作期間: {info.period}
+              </p>
             )}
 
             {/* 使用技術 */}
             {info.stack && info.stack.length > 0 && (
               <div className="mb-6">
-                <p className="text-sm font-semibold text-gray-600 mb-2">使用技術</p>
+                <p className="text-sm font-semibold text-gray-600 mb-2">
+                  使用技術
+                </p>
                 <ul className="flex flex-wrap gap-2 text-sm text-gray-600">
                   {info.stack.map((tech, index) => (
-                    <li key={index} className="bg-gray-100 px-3 py-1 rounded-full">
+                    <li
+                      key={index}
+                      className="bg-gray-100 px-3 py-1 rounded-full"
+                    >
                       {tech}
                     </li>
                   ))}
