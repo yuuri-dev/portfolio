@@ -4,52 +4,57 @@ const skillArray = [
   {
     lang: 'JavaScript',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    description: '毎日使用しています。',
+    description: 'ほぼ全てのアプリで使用',
   },
   {
     lang: 'TypeScript',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    description: '現在学習中です。',
+    description: 'ほぼ全てのアプリで使用',
   },
   {
     lang: 'React',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    description: 'ほぼ毎日使用しています。',
+    description: 'ほぼ全てのアプリで使用',
   },
   {
     lang: 'Next.js',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-    description: 'ほとんどのプロジェクトで使用しています。',
+    description: 'ほとんどのプロジェクトで使用',
   },
   {
     lang: 'Vite',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg',
-    description: 'ハッカソンで使用しました。',
+    description: 'ハッカソンで使用',
   },
   {
     lang: 'Node.js',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-    description: '二ヶ月ほどbackendを学習しました。Expressの経験もあります。',
+    description: 'backendの大部分で使用。Expressも経験あり。',
   },
   {
     lang: 'Supabase',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
-    description: 'データベースはすべてsupabaseを使用しています。',
+    description: 'ShiftyなどのDB実装で使用',
   },
   {
     lang: 'Figma',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-    description: 'ハッカソンで使用',
+    description: 'アプリのデザインの思案で使用',
+  },
+  {
+    lang: 'Canva',
+    img: '',
+    description: 'アプリのデザイン・アイコン作成等で使用',
   },
   {
     lang: 'TailwindCSS',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
-    description: '現在学習中です。',
+    description: '最近のwebアプリ開発の大半で使用',
   },
   {
     lang: 'Vercel',
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg',
-    description: 'デプロイで使用',
+    description: '多くのアプリのデプロイで使用',
   },
 ];
 
